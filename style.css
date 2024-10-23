@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    place-items: center;
+}
+img{
+    width: 150px;
+}
+.createChar{
+    border: 2px solid red;
+}
