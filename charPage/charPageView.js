@@ -1,26 +1,28 @@
 function charPageView() {
   document.getElementById("app").innerHTML = `
-      <div className="main">
-        <div className="createChar">
-  
-           <label for="char-name">Create your character's name</label>
-           <input 
-           type="text"
-           id="char-name" 
-           />
-           <h4>Select your archetype</h4>
-          <div class="show-chars">
-         
-            ${showChars()}
-          
+      <div class="main">
+
+          <div class="createChar">
+              <h2>Create a new character</h2>
+              <label for="char-name">Create your character's name</label>
+              <input 
+                type="text"
+                id="char-name" 
+              />
+              <h4>Select your archetype</h4>
+
+              <div class="show-chars">
+                ${showChars()}
+              </div>
           </div>
-        </div>
-          <div className="currentChar">
-            ${showCurrentChar()}
+
+          <div class="currentChar">
+              <h2>Current characters</h2>
+              ${showCurrentChar()}
           </div>
-      
+
       </div>
-      `;
+  `;
 }
 
 function showChars() {
@@ -34,13 +36,11 @@ function showChars() {
       </div>  
          `;
   });
-  return chars;
+  return chars.join('');
 }
 
 function showCurrentChar() {
-  // let id= model.app.userLoggedIn.userId
   let currentUserData = model.data.userData.filter((data) => data.userId === 1);
-  // console.log(currentUserData);
 
   let html = currentUserData.map((char) => {
     return `
@@ -48,10 +48,10 @@ function showCurrentChar() {
             <img src="#" alt="current char img" />
             <p>${char.characterName}</p>
             <p>${char.characterArquetype}</p>
-            <p>${char.currentLvl}</p>
+            <p>Level: ${char.currentLvl}</p>
         </div>
-        `;
+    `;
   });
 
-  return html;
+  return html.join(''); 
 }
