@@ -1,7 +1,7 @@
 const model = {
   app: {
     userLoggedIn: null,
-    currentPage: "charpage",
+    currentPage: "loginpage",
   },
 
   input: {
