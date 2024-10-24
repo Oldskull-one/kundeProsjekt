@@ -52,3 +52,61 @@ body {
     width: 80%;
     font-size: 16px;
 }
+
+/* Scoped styles for the login page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.login-page .form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.login-page input {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-page button {
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-page button:hover {
+    background-color: #ddd;
+}
+
+.login-page p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-page span {
+    color: teal;
+    cursor: pointer;
+}
+
+.login-page span:hover {
+    text-decoration: underline;
+}
