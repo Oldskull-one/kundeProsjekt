@@ -8,5 +8,8 @@ function updateView(){
     else if(page==="createAccountpage"){
         createAccView();
     }
+    else if(page==="charpage"){
+        charPageView();
+    }
     
 };

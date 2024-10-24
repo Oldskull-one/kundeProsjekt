@@ -1,7 +1,7 @@
 function login() {
-  let user = getUserByName(model.input.login.userName);
+  // let user = getUserByName(model.input.login.userName);
 
-  model.app.currentPage = "homepage";
+  model.app.currentPage = "charpage";
   updateView();
 }
 
