@@ -13,6 +13,7 @@ const model = {
       email: "",
       userName: "",
       password: "",
+      rewritePassword: "",
     },
     createNewCharacter: {
       characterName: "",
@@ -25,21 +26,21 @@ const model = {
         userName: "abi",
         userEmail: "abibakar@getacademy.no",
         password: "1234",
-        charList:[1,2],
+        charList:[1,2,3],
       },
       {
         userId: 2,
         userName: "Chris",
         userEmail: "christoffer@getacademy.no",
         password: "1234",
-        charList:[1],
+        charList:[4],
       },
       {
         userId: 3,
         userName: "hakan",
         userEmail: "hakan@getacademy.no",
         password: "1234",
-        charList:[],
+        charList:[5],
 
       },
       {
@@ -53,7 +54,7 @@ const model = {
     charData: [
       {
         charId: 1,
-        characterName: "asdf",
+        characterName: "Char1",
         health: 80,
         coding: 75,
         nk: 99,
@@ -61,7 +62,31 @@ const model = {
       },
       {
         charId: 2,
-        characterName: "jejej",
+        characterName: "Char2",
+        health: 70,
+        coding: 75,
+        nk: 99,
+        backpack: [],
+      },
+      {
+        charId: 3,
+        characterName: "Char3",
+        health: 40,
+        coding: 75,
+        nk: 99,
+        backpack: [],
+      },
+      {
+        charId: 4,
+        characterName: "Char4",
+        health: 70,
+        coding: 75,
+        nk: 99,
+        backpack: [],
+      },
+      {
+        charId: 5,
+        characterName: "Char5",
         health: 70,
         coding: 75,
         nk: 99,
