@@ -26,12 +26,12 @@ function charPageView() {
 }
 
 function showChars() {
-  let chars = model.data.characters.map((char) => {
-    return ` 
+  let chars = model.data.archetype.map((char) => {
+    return /*HTML*/` 
       <div class="show-char">
         <img src= ${char.image}>
-        <p>${char.codingPoints} Coding points</p>
-        <p>${char.nkPoints} NK points</p>
+        <p>${char.codingBonus} Coding points</p>
+        <p>${char.nkBonus} NK points</p>
         <h4>${char.characterArquetype}</h4>
       </div>  
          `;
@@ -40,7 +40,7 @@ function showChars() {
 }
 
 function showCurrentChar() {
-  let currentUserData = model.data.userData.filter((data) => data.userId === 1);
+  let currentUserData = model.data.charData.filter((data) => data.userId === 1);
 
   let html = currentUserData.map((char) => {
     return `

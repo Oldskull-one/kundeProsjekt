@@ -71,26 +71,24 @@ const model = {
 
     archetype: [
       {
-        arcId: 1,
+        arcId: 0,
         arcName: "Geek",
         codingBonus: 5,
         nkBonus: -5,
         image: "./images/geek.png"
       },
       {
-        charId: 2,
-        characterName: " ",
+        arcId: 1,
         characterArquetype: "Charmer",
-        codingPoints: -5,
-        nkPoints: +5,
+        codingBonus: -5,
+        nkBonus: +5,
         image: "./images/charmer.png"
       },
       {
-        charId: 3,
-        characterName: " ",
+        arcId: 2,
         characterArquetype: "Avarage Joe",
-        codingPoints: 0,
-        nkPoints: 0,
+        codingBonus: 0,
+        nkBonus: 0,
         image: "./images/average.png"
       }
     ],
