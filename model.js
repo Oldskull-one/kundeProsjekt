@@ -1,6 +1,6 @@
 const model = {
   app: {
-    userLoggedIn: 2,
+    userLoggedIn: null,
     currentPage: "loginpage",
   },
 

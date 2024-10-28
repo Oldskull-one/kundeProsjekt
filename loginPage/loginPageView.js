@@ -5,12 +5,14 @@ function loginView() {
                 <input
                     type='text'
                     placeholder='Enter username'
-                    onchange='model.input.login.userName=this.value'
+                    onchange='model.input.login.userName=this.value.trim()'
+                    required
                 />
                 <input 
-                    type='password'
+                    type='text'
                     placeholder='Enter password'
                     onchange='model.input.login.password=this.value'
+                    required
                 />
                 <button onclick="login()">Login</button>
                 <p>Har du ikke profil? 
