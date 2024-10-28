@@ -32,7 +32,7 @@ function showArc() {
         <img src= ${char.image}>
         <p>${char.codingBonus} Coding points</p>
         <p>${char.nkBonus} NK points</p>
-        <h4>${char.characterArquetype}</h4>
+        <h4>${char.arcName}</h4>
       </div>  
          `;
   });
@@ -40,18 +40,26 @@ function showArc() {
 }
 
 function showCurrentChar() {
-  let currentUserData = model.data.charData.filter((data) => data.userId === 1);
+  const currentUser = model.data.users.find(user => user.userId === 1);
+  
+  if (!currentUser || !currentUser.charList) return "<p>No characters available</p>";
 
-  let html = currentUserData.map((char) => {
+  let userCharacters = currentUser.charList
+    .map(charId => model.data.charData.find(char => char.charId === charId))
+    .filter(character => character !== undefined); 
+
+  let html = userCharacters.map(char => {
     return /*HTML*/`
-        <div class="user-char">
-            <img src="#" alt="current char img" />
-            <p>${char.characterName}</p>
-            <p>${char.characterArquetype}</p>
-            <p>Level: ${char.currentLvl}</p>
-        </div>
+      <div class="user-char">
+          <img src="${char.image || '#'}" alt="current char img" />
+          <p>${char.characterName}</p>
+          <p>Health: ${char.health}</p>
+          <p>Coding: ${char.coding}</p>
+          <p>NK: ${char.nk}</p>
+      </div>
     `;
-  });
+  }).join('');
 
-  return html; 
+  return html || "<p>No characters available</p>";
 }
+

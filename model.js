@@ -79,14 +79,14 @@ const model = {
       },
       {
         arcId: 1,
-        characterArquetype: "Charmer",
+        arcName: "Charmer",
         codingBonus: -5,
         nkBonus: +5,
         image: "./images/charmer.png"
       },
       {
         arcId: 2,
-        characterArquetype: "Avarage Joe",
+        arcName: "Avarage Joe",
         codingBonus: 0,
         nkBonus: 0,
         image: "./images/average.png"
