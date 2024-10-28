@@ -11,8 +11,8 @@ function charPageView() {
               />
               <h4>Select your archetype</h4>
 
-              <div class="show-chars">
-                ${showChars()}
+              <div class="show-arcs">
+                ${showArc()}
               </div>
           </div>
 
@@ -25,8 +25,8 @@ function charPageView() {
   `;
 }
 
-function showChars() {
-  let chars = model.data.archetype.map((char) => {
+function showArc() {
+  let arcs = model.data.archetype.map((char) => {
     return /*HTML*/` 
       <div class="show-char">
         <img src= ${char.image}>
@@ -36,14 +36,14 @@ function showChars() {
       </div>  
          `;
   });
-  return chars.join('');
+  return arcs.join('');
 }
 
 function showCurrentChar() {
   let currentUserData = model.data.charData.filter((data) => data.userId === 1);
 
   let html = currentUserData.map((char) => {
-    return `
+    return /*HTML*/`
         <div class="user-char">
             <img src="#" alt="current char img" />
             <p>${char.characterName}</p>

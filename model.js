@@ -25,7 +25,7 @@ const model = {
         userName: "abi",
         userEmail: "abibakar@getacademy.no",
         password: "1234",
-        charList:[1,2]
+        charList:[1,2],
       },
       {
         userId: 2,

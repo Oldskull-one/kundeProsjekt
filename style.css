@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 
-.show-chars {
+.show-arcs {
     display: flex;
     justify-content: space-around; 
     align-items: center;
