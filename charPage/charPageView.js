@@ -1,29 +1,30 @@
 function charPageView() {
   document.getElementById("app").innerHTML = /*HTML*/ `
       <div class="main">
-
           <div class="createChar">
               <h2>Create a new character</h2>
-              <label for="char-name">Create your character's name</label>
+              <label for="char-name">Enter your character's name</label>
               <input 
                 type="text"
-                id="char-name" 
+                id="char-name"
+                placeholder="Character Name"
+                onchange="updateCharacterName(this.value)"
               />
               <h4>Select your archetype</h4>
-
               <div class="show-arcs">
                 ${showArc()}
               </div>
+              <button onclick="addCharacter()">Create Character</button>
           </div>
 
           <div class="currentChar">
               <h2>Current characters</h2>
               ${showCurrentChar()}
           </div>
-
       </div>
   `;
 }
+
 
 function showArc() {
   let arcs = model.data.archetype.map((char) => {

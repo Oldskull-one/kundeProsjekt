@@ -46,6 +46,10 @@ body {
     margin-bottom: 10px;
 }
 
+.show-char.selected {
+    border: 2px solid #00f;
+  }
+
 .createChar input[type="text"] {
     padding: 10px;
     margin-top: 10px;

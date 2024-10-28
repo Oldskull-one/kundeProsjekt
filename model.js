@@ -59,6 +59,8 @@ const model = {
         coding: 75,
         nk: 99,
         backpack: [],
+        wallet: 130,
+        arcName: "0",
       },
       {
         charId: 2,
@@ -67,6 +69,8 @@ const model = {
         coding: 75,
         nk: 99,
         backpack: [],
+        wallet: 245,
+        arcId: "1",
       },
       {
         charId: 3,
@@ -75,6 +79,8 @@ const model = {
         coding: 75,
         nk: 99,
         backpack: [],
+        wallet: 780,
+        arcId: "2",
       },
       {
         charId: 4,
@@ -83,6 +89,8 @@ const model = {
         coding: 75,
         nk: 99,
         backpack: [],
+        wallet: 0,
+        arcId: "1",
       },
       {
         charId: 5,
@@ -91,6 +99,8 @@ const model = {
         coding: 75,
         nk: 99,
         backpack: [],
+        wallet: 500,
+        arcId: "0",
       },
     ],
 
