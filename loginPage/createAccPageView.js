@@ -1,5 +1,5 @@
 function createAccView() {
-    document.getElementById('app').innerHTML = `
+    document.getElementById('app').innerHTML = /*HTML*/ `
         <div class="register-page">
             <div class='form-input'>
                 <label for="email">Email:</label>

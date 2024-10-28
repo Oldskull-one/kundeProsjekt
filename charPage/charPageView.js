@@ -1,5 +1,5 @@
 function charPageView() {
-  document.getElementById("app").innerHTML = `
+  document.getElementById("app").innerHTML = /*HTML*/ `
       <div class="main">
 
           <div class="createChar">
@@ -53,5 +53,5 @@ function showCurrentChar() {
     `;
   });
 
-  return html.join(''); 
+  return html; 
 }

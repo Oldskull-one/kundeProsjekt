@@ -25,29 +25,34 @@ const model = {
         userName: "abi",
         userEmail: "abibakar@getacademy.no",
         password: "1234",
+        charList:[1,2]
       },
       {
         userId: 2,
         userName: "Chris",
         userEmail: "christoffer@getacademy.no",
         password: "1234",
+        charList:[],
       },
       {
         userId: 3,
         userName: "hakan",
         userEmail: "hakan@getacademy.no",
         password: "1234",
+        charList:[],
+
       },
       {
         userId: 4,
         userName: "leo",
         userEmail: "leonardo@getacademy.no",
         password: "1234",
+        charList:[],
       },
     ],
-    userData: [
+    charData: [
       {
-        userId: 1,
+        charId: 1,
         characterName: "asdf",
         health: 80,
         coding: 75,
@@ -55,7 +60,7 @@ const model = {
         backpack: [],
       },
       {
-        userId: 2,
+        charId: 2,
         characterName: "jejej",
         health: 70,
         coding: 75,
@@ -64,13 +69,12 @@ const model = {
       },
     ],
 
-    characters: [
+    archetype: [
       {
-        charId: 1,
-        characterName: " ",
-        characterArquetype: "Geek",
-        codingPoints: 5,
-        nkPoints: -5,
+        arcId: 1,
+        arcName: "Geek",
+        codingBonus: 5,
+        nkBonus: -5,
         image: "./images/geek.png"
       },
       {
