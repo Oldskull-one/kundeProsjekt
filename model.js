@@ -1,4 +1,4 @@
-const model = {
+let model = {
   app: {
     userLoggedIn: null,
     currentPage: "loginpage",

@@ -51,22 +51,7 @@ const newCharacter = {
     charPageView();
   }
 
-  function showArc() {
-    return model.data.archetype.map((char) => {
-      return /*HTML*/`
-        <div 
-          class="show-char" 
-          id="arc-${char.arcId}"
-          onclick="selectArchetype(${char.arcId})"
-        >
-          <img src="${char.image}" alt="${char.arcName}">
-          <p>${char.codingBonus} Coding points</p>
-          <p>${char.nkBonus} NK points</p>
-          <h4>${char.arcName}</h4>
-        </div>
-      `;
-    }).join('');
-  }
+  
   
   function addCharacter() {
     const user = model.data.users.find(user => user.userId === model.app.userLoggedIn);
@@ -99,7 +84,7 @@ const newCharacter = {
     };
   
     model.data.charData.push(character);
-    user.charList.push(newCharId);
+    model.data.users[3].charList.push(newCharId);
   
     newCharacter.characterName = "";
     newCharacter.archetype = null;

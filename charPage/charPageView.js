@@ -27,17 +27,20 @@ function charPageView() {
 
 
 function showArc() {
-  let arcs = model.data.archetype.map((char) => {
-    return /*HTML*/` 
-      <div class="show-char">
-        <img src= ${char.image}>
+  return model.data.archetype.map((char) => {
+    return /*HTML*/`
+      <div 
+        class="show-char" 
+        id="arc-${char.arcId}"
+        onclick="selectArchetype(${char.arcId})"
+      >
+        <img src="${char.image}" alt="${char.arcName}">
         <p>${char.codingBonus} Coding points</p>
         <p>${char.nkBonus} NK points</p>
         <h4>${char.arcName}</h4>
-      </div>  
-         `;
-  });
-  return arcs.join('');
+      </div>
+    `;
+  }).join('');
 }
 
 function showCurrentChar() {
