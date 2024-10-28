@@ -1,6 +1,6 @@
 const model = {
   app: {
-    userLoggedIn: null,
+    userLoggedIn: 2,
     currentPage: "loginpage",
   },
 
@@ -32,7 +32,7 @@ const model = {
         userName: "Chris",
         userEmail: "christoffer@getacademy.no",
         password: "1234",
-        charList:[],
+        charList:[1],
       },
       {
         userId: 3,

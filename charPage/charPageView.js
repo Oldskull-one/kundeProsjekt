@@ -40,7 +40,7 @@ function showArc() {
 }
 
 function showCurrentChar() {
-  const currentUser = model.data.users.find(user => user.userId === 1);
+  const currentUser = model.data.users.find(user => user.userId === model.app.userLoggedIn);
   
   if (!currentUser || !currentUser.charList) return "<p>No characters available</p>";
 
@@ -62,4 +62,3 @@ function showCurrentChar() {
 
   return html || "<p>No characters available</p>";
 }
-
