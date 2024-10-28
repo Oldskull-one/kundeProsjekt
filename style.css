@@ -110,7 +110,6 @@ body {
     text-decoration: underline;
 }
 
-/* Scoped styles for the register new account page */
 .register-page {
     display: flex;
     justify-content: center;

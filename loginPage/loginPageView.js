@@ -1,5 +1,5 @@
 function loginView() {
-    document.getElementById('app').innerHTML = `
+    document.getElementById('app').innerHTML = /*HTML*/`
         <div class="login-page">
             <div class='form-input'>
                 <input
