@@ -2,6 +2,7 @@ const model = {
   app: {
     userLoggedIn: null,
     currentPage: "loginpage",
+
   },
 
   input: {
