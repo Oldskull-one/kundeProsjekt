@@ -8,7 +8,7 @@ function charPageView() {
                 type="text"
                 id="char-name"
                 placeholder="Character Name"
-                onchange="updateCharacterName(this.value)"
+                onchange="model.input.createNewCharacter.characterName = this.value"
               />
               <h4>Select your archetype</h4>
               <div class="show-arcs">

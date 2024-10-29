@@ -1,6 +1,6 @@
 
 const newCharacter = {
-    characterName: "",
+    characterName: model.input.createNewCharacter.characterName,
     archetype: null,
   };
   
@@ -20,16 +20,16 @@ const newCharacter = {
   function addCharacter() {
     const user = model.data.users.find(user => user.userId === model.app.userLoggedIn);
   
-    if (!newCharacter.characterName || !newCharacter.archetype) {
-      alert("Please enter a character name and select an archetype.");
-      return;
-    }
+    // if (!newCharacter.characterName || !newCharacter.archetype) {
+    //   alert("Please enter a character name and select an archetype.");
+    //   return;
+    // }
   
 
     const newCharId = model.data.charData.length + 1;
     const character = {
       charId: newCharId,
-      characterName: newCharacter.characterName,
+      characterName: model.input.createNewCharacter.characterName,
       health: 100,
       coding: 20 + newCharacter.archetype.codingBonus,
       nk: 20 + newCharacter.archetype.nkBonus,
