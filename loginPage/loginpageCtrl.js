@@ -1,6 +1,6 @@
 function login() {
   let user = getUserByName(model.input.login.userName);
-  console.log(user);
+  // console.log(user);
   if (!model.input.login.userName || !model.input.login.password) {
     alert("Feltene må fylles ut");
   } else if (user && user.password === model.input.login.password) {
