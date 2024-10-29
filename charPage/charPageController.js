@@ -19,11 +19,6 @@ const newCharacter = {
   
   function addCharacter() {
     const user = model.data.users.find(user => user.userId === model.app.userLoggedIn);
-    
-    if (!user) {
-      alert("No user logged in!");
-      return;
-    }
   
     if (!newCharacter.characterName || !newCharacter.archetype) {
       alert("Please enter a character name and select an archetype.");
@@ -35,10 +30,11 @@ const newCharacter = {
     const character = {
       charId: newCharId,
       characterName: newCharacter.characterName,
-      health: 100 + newCharacter.archetype.nkBonus,
-      coding: 50 + newCharacter.archetype.codingBonus,
-      nk: 50 + newCharacter.archetype.nkBonus,
+      health: 100,
+      coding: 20 + newCharacter.archetype.codingBonus,
+      nk: 20 + newCharacter.archetype.nkBonus,
       backpack: [],
+      wallet: 500,
       arcName: newCharacter.archetype.arcName,
     };
   
@@ -50,45 +46,5 @@ const newCharacter = {
   
     charPageView();
   }
-
   
-  
-  function addCharacter() {
-    const user = model.data.users.find(user => user.userId === model.app.userLoggedIn);
-    
-    if (!user) {
-      alert("No user logged in!");
-      return;
-    }
-  
-    if (!newCharacter.characterName || !newCharacter.archetype) {
-      alert("Please enter a character name and select an archetype.");
-      return;
-    }
-  
-    const baseHealth = 100;  // Helsetilstand
-    const baseWallet = 500;  // Starting coins in wallet
-    const baseCoding = 20 + newCharacter.archetype.codingBonus;  // Kodeferdighetsmåleren
-    const baseNK = 20 + newCharacter.archetype.nkBonus;          // NK-ferdighetsmåleren
-  
-    const newCharId = model.data.charData.length + 1;
-    const character = {
-      charId: newCharId,
-      characterName: newCharacter.characterName,
-      health: baseHealth,
-      coding: baseCoding,
-      nk: baseNK,
-      wallet: baseWallet,
-      backpack: [],
-      arcName: newCharacter.archetype.arcId,
-    };
-  
-    model.data.charData.push(character);
-    model.data.users[3].charList.push(newCharId);
-  
-    newCharacter.characterName = "";
-    newCharacter.archetype = null;
-  
-    charPageView();
-  }
   

@@ -2,8 +2,8 @@ function charPageView() {
   document.getElementById("app").innerHTML = /*HTML*/ `
       <div class="main">
           <div class="createChar">
-              <h2>Create a new character</h2>
-              <label for="char-name">Enter your character's name</label>
+              <h1>Create a new character</h1>
+              <h2>Enter your character's name</h2>
               <input 
                 type="text"
                 id="char-name"
@@ -14,11 +14,11 @@ function charPageView() {
               <div class="show-arcs">
                 ${showArc()}
               </div>
-              <button onclick="addCharacter()">Create Character</button>
+              <button id="createCharButton" onclick="addCharacter()">Create Character</button>
           </div>
 
           <div class="currentChar">
-              <h2>Current characters</h2>
+              <h1>Current characters</h1>
               ${showCurrentChar()}
           </div>
       </div>
@@ -50,19 +50,26 @@ function showCurrentChar() {
 
   let userCharacters = currentUser.charList
     .map(charId => model.data.charData.find(char => char.charId === charId))
-    .filter(character => character !== undefined); 
 
   let html = userCharacters.map(char => {
     return /*HTML*/`
       <div class="user-char">
-          <img src="${char.image || '#'}" alt="current char img" />
-          <p>${char.characterName}</p>
+          <img src="${char.image}" alt="">
+          <p>Character name: ${char.characterName}</p>
           <p>Health: ${char.health}</p>
           <p>Coding: ${char.coding}</p>
           <p>NK: ${char.nk}</p>
+          <p>Penge: ${char.wallet}</p>
       </div>
     `;
   }).join('');
 
   return html || "<p>No characters available</p>";
 }
+
+// Trenger:
+// - fiks layout på Archetype-knapper,
+// - legg til et "choose character image",
+// - fiks layout på Current Character side,
+// - fiks databaseoppdatering når du oppretter new character,
+// - få de Current Chracters til å oppføre seg som en knapp til startsiden
